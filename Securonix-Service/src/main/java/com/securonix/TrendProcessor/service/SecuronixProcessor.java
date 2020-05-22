@@ -58,8 +58,8 @@ public class SecuronixProcessor {
                 fos.close();
                 
         		List<Record> records = csv.parseAllRecords(newFile);
-        		newFile.deleteOnExit();
         		processSecuronixData(records, securonixTrendData, securonixTopUsers, securonixTopFiles);
+        		newFile.deleteOnExit();
         	}
         }
         

@@ -7,7 +7,9 @@
         </p-fileUpload>
     </div>
     <div class="ui-g-6">
-        <p-dropdown *ngIf="isDateDrown" [options]="trendDates" optionLabel="name"  [(ngModel)]="selectedTrendDate" editable="true" placeholder="Select Trend Date" (onChange)="onTrendDateChange($event)"></p-dropdown>
+        <p-dropdown *ngIf="isDateDrown" [options]="trendDates" optionLabel="name"  
+        [(ngModel)]="selectedTrendDate" editable="true" placeholder="Select Trend Date" 
+        (onChange)="onTrendDateChange()"></p-dropdown>
     </div>
 </div>
 <div class="ui-g">

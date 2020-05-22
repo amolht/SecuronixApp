@@ -1,7 +1,19 @@
-# AppName - Simplified Building Web Application using Springboot + Angular + Maven
+# Securonix TrendProcessing App using Springboot + Angular + Maven
 
-[![Build Status](https://travis-ci.com/ihappyk/AppName.svg?branch=master)](https://travis-ci.com/ihappyk/AppName)
+# Backend Run
+- mvn clean springboot:run
 
-[![Hang out with the team](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://dzone.com/articles/simplified-building-web-application-using-spring-b)
+Will start backend service on 
+- http://localhost:8080
 
-DZone Article Source Code
+# API consumed by Frontend
+localhost:8080/securonix/process-securonix-data
+
+# Frontend Run
+Install Angular 9 CLI
+
+- ng serve
+
+Will start application at 
+- http://localhost:4200
+

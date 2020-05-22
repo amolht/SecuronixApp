@@ -52,8 +52,8 @@ export class AppComponent implements OnInit {
         console.log(this.trendDates);
     }
 
-    onTrendDateChange(event) {
-        this.messageService.add({severity:'success', summary:'Success', detail:'Please see all trends for date : ' + event});
+    onTrendDateChange() {
+        this.messageService.add({severity:'success', summary:'Success', detail:'Please see all trends for date : ' + this.selectedTrendDate['name']});
         this.processRecords(this.selectedTrendDate);
         this.securonixTopFilesForDate = this.securonixTopFiles[this.selectedTrendDate['name']];
         this.securonixTopUsersForDate = this.securonixTopUsers[this.selectedTrendDate['name']];

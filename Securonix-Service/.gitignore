@@ -1,0 +1,7 @@
+# Eclipse generated files.
+*/.classpath
+*/.project
+*/.settings/*
+
+# Maven generated target folder.
+*/target/*
