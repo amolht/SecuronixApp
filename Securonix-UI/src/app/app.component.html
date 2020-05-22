@@ -1,0 +1,38 @@
+<p-toast position="top-right"></p-toast>
+<p-progressSpinner *ngIf="isDataProcessing" [style]="{width: '50px', height: '50px'}" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
+
+<div class="ui-g">
+    <div class="ui-g-6">
+        <p-fileUpload name="demo[]" customUpload="true" (uploadHandler)="uploadFile($event)"  accept=".zip">   
+        </p-fileUpload>
+    </div>
+    <div class="ui-g-6">
+        <p-dropdown *ngIf="isDateDrown" [options]="trendDates" optionLabel="name"  [(ngModel)]="selectedTrendDate" editable="true" placeholder="Select Trend Date" (onChange)="onTrendDateChange($event)"></p-dropdown>
+    </div>
+</div>
+<div class="ui-g">
+    <div class="ui-g-6">
+        <b>Top 5 Files for day</b>
+        <ul>
+            <li *ngFor="let securonixTopUser of securonixTopUsersForDate | keyvalue">
+              {{ securonixTopUser.key }}  =>  {{ securonixTopUser.value }}
+            </li>
+        </ul>
+    </div>
+
+    <div class="ui-g-6">
+        <b>Top 5 Files for day</b>
+        <ul>
+            <li *ngFor="let securonixTopFile of securonixTopFilesForDate | keyvalue">
+              {{ securonixTopFile.key }}  =>  {{ securonixTopFile.value }}
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="ui-g">
+    <b>Trend for a selected day</b>
+    <div class="ui-g-12">
+        <p-chart type="bar" [data]="data"></p-chart>
+    </div>
+</div>
