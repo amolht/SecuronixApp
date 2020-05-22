@@ -1,4 +1,4 @@
-# Securonix TrendProcessing App using Springboot + Angular + Maven
+# Securonix TrendProcessing App using Springboot + Angular9(PrimeNG 9) + Maven
 
 # Backend Run
 - mvn clean springboot:run
@@ -16,4 +16,6 @@ Install Angular 9 CLI
 
 Will start application at 
 - http://localhost:4200
+
+![Securonix TrendProcessor demo](demo/SecuronixTrendProcessor.gif)
 
